@@ -23,15 +23,24 @@ body {
 	font-style: normal;
 }
 
-h2 {
+h2, h3 {
   font-family: "Featherweight", sans-serif;
   font-size: 72px;
   line-height: 1;
   text-transform: uppercase;
+  margin-top: 0;
 }
 
-h2 strong {
+h2 strong, h3 strong {
   font-family: "Lightweight", sans-serif;
+}
+
+h3 {
+  font-size: 48px;
+}
+
+h3 small {
+  font-size: 36px;
 }
 
 a {
@@ -82,20 +91,23 @@ nav .home a {
 }
 
 nav .corporate a {
-  height: 85px;
+  height: 50px;
   background-position-y: -190px;
 }
 
 nav .theatre a {
-  background-position-y: -295px;
-}
-
-nav .performance a {
-  background-position-y: -355px;
+  background-position-y: -260px;
+  height: 55px;
 }
 
 nav .writing a {
-  background-position-y: -415px;
+  background-position-y: -335px;
+  height: 40px;
+}
+
+nav .performance a {
+  background-position-y: -395px;
+  height: 40px;
 }
 
 nav .social {
@@ -113,7 +125,7 @@ nav .social a {
   margin: 0 22px 0 0;
   text-indent: -100em;
   overflow: hidden;
-  background: url(../img/navigation.png) no-repeat -6px -461px;
+  background: url(../img/navigation.png) no-repeat -6px -440px;
 }
 
 nav .social a.facebook:hover {
@@ -139,6 +151,11 @@ nav .social a.youtube:hover {
 section {
   margin-left: 240px;
   min-height: 720px;
+  padding-top: 30px;
+}
+
+#home {
+  padding-top: 0;
 }
 
 blockquote[data-quote] {
@@ -146,6 +163,9 @@ blockquote[data-quote] {
   padding: 0;
   border: none;
 }
+
+blockquote.span5[data-quote]   { margin-left: 10px; }
+blockquote.offset1[data-quote] { margin-left: 50px; }
 
 blockquote[data-quote] img {
   display: block;
@@ -165,4 +185,60 @@ blockquote[data-quote] img {
 
 #home .intro {
   padding-top: 210px;
+}
+
+.carousel {
+  margin-top: 20px;
+  line-height: inherit;
+}
+
+.carousel-navigation {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  background: #999;
+  background: rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 1px 0px white;
+  height: 20px;
+  padding: 2px;
+  border-radius: 12px;
+  z-index: 10;
+}
+
+.carousel-control {
+  position: static;
+  float: left;
+  width: 16px;
+  height: 16px;
+  margin: 2px;
+  padding: 0;
+  border: none;
+  text-indent: -10em;
+  overflow: hidden;
+}
+
+.carousel-indicators {
+  position: static;
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+
+.carousel-indicators li {
+  float: left;
+  margin: 2px;
+  width: 16px;
+  height: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  -webkit-transition: background-color 0.2s ease;
+  -moz-transition: background-color 0.2s ease;
+}
+
+.carousel-indicators li:hover {
+  background: white;
+}
+
+.carousel-indicators li.active {
+  background: #ed1c24;
 }
